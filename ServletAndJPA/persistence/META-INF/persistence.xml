@@ -10,21 +10,19 @@ version="2.1">
 		<class>model.Employee</class>
 		
 		<properties>
-		
-		<!-- 			
+				
 			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
 			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/jpa.schema" />
 			<property name="javax.persistence.jdbc.user" value="root" />
 			<property name="javax.persistence.jdbc.password" value="" />
-		-->					
+		
+		<!-- 					
 			<property name="javax.persistence.jdbc.driver" value="oracle.jdbc.driver.OracleDriver" />
 			<property name="javax.persistence.jdbc.url" value="jdbc:oracle:thin:@localhost:1520:xe" />
 			<property name="javax.persistence.jdbc.user" value="Levent" />
 			<property name="javax.persistence.jdbc.password" value="123456" />
 				
-			<property name="eclipselink.ddl-generation" value="drop-and-create-tables" />
-			<property name="eclipselink.logging.level" value="OFF" />
-				
+		-->		
 		</properties>
 		
 	</persistence-unit>
@@ -42,8 +40,8 @@ version="2.1">
 		 <!-- javax.persistence.jdbc... property'lerini Hibernate icin de problemsiz sekilde kulanabiliriz. -->
 		 	
 			<property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver" />
-			<property name="hibernate.hbm2ddl.auto" value="create"/>
-			<property name="hibernate.id.new_generator_mappings" value="true"/>	
+			
+				
 					
 			<!-- 
 			<property name="hibernate.connection.driver_class" value="oracle.jdbc.driver.OracleDriver" />

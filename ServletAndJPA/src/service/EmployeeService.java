@@ -1,11 +1,11 @@
-package dao;
+package service;
 
 import java.util.List;
 
 import model.Employee;
 
-public interface EmployeeDAO {
-
+public interface EmployeeService {
+	
 	public Employee createEmployee(String name, String surname, int salary);
 
 	public Employee findEmployee(int id);
@@ -13,5 +13,4 @@ public interface EmployeeDAO {
 	public List<Employee> findAllEmployees();
 
 	public void removeEmployee(int id);
-
 }
