@@ -76,8 +76,8 @@
 				<div class="row">
 					<div class="col-md-6">
 					<legend>Employee List</legend>
-						<table id="example" class="table table-striped table-bordered"
-							cellspacing="0" width="100%">
+						<div class="table-responsive">
+							<table id="example" class="table table-striped table-bordered">							
 							<thead>
 								<tr>
 									<th>Name</th>
@@ -100,6 +100,7 @@
 								</c:forEach>
 							</tbody>
 						</table>
+						</div>
 					</div>
 					<div class="col-md-6"></div>
 				</div>
