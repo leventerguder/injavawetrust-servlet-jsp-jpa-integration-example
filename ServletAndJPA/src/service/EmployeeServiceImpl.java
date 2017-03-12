@@ -14,8 +14,8 @@ public class EmployeeServiceImpl implements EmployeeService {
 	}
 
 	@Override
-	public Employee createEmployee(String name, String surname, int salary) {
-		return employeeDAOImpl.createEmployee(name, surname, salary);
+	public Employee insertEmployee(Employee employee) {
+		return employeeDAOImpl.insertEmployee(employee);
 	}
 
 	@Override

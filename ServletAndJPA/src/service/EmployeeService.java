@@ -6,7 +6,7 @@ import model.Employee;
 
 public interface EmployeeService {
 	
-	public Employee createEmployee(String name, String surname, int salary);
+	public Employee insertEmployee(Employee employee);
 
 	public Employee findEmployee(int id);
 

@@ -13,7 +13,6 @@ import javax.servlet.http.HttpServletResponse;
 import service.EmployeeServiceImpl;
 import model.Employee;
 
-
 @WebServlet("/employeeController")
 public class EmployeeController extends HttpServlet {
 
@@ -27,7 +26,8 @@ public class EmployeeController extends HttpServlet {
 		int employeeSalary = Integer.parseInt(req.getParameter("salary"));
 
 		EmployeeServiceImpl employeeService = new EmployeeServiceImpl();
-		employeeService.createEmployee(employeeName, employeeSurname, employeeSalary);
+		Employee employee = new Employee(employeeName, employeeSurname, employeeSalary);
+		employeeService.insertEmployee(employee);
 
 		List<Employee> allEmployees = employeeService.findAllEmployees();
 		req.setAttribute("allEmployees", allEmployees);

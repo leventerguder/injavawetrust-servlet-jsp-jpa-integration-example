@@ -19,8 +19,7 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 	}
 
 	@Override
-	public Employee createEmployee(String name, String surname, int salary) {
-		Employee employee = new Employee(name, surname, salary);
+	public Employee insertEmployee(Employee employee) {
 		entityManager.getTransaction().begin();
 		entityManager.persist(employee);
 		entityManager.getTransaction().commit();
