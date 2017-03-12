@@ -14,8 +14,8 @@ version="2.1">
 			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
 			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/jpa.schema" />
 			<property name="javax.persistence.jdbc.user" value="root" />
-			<property name="javax.persistence.jdbc.password" value="" />
-		
+			<property name="javax.persistence.jdbc.password" value="123456" />
+			<property name="eclipselink.ddl-generation" value="drop-and-create-tables" />
 		<!-- 					
 			<property name="javax.persistence.jdbc.driver" value="oracle.jdbc.driver.OracleDriver" />
 			<property name="javax.persistence.jdbc.url" value="jdbc:oracle:thin:@localhost:1520:xe" />
@@ -23,33 +23,6 @@ version="2.1">
 			<property name="javax.persistence.jdbc.password" value="123456" />
 				
 		-->		
-		</properties>
-		
-	</persistence-unit>
-	
-	<persistence-unit name="EmployeePersistenceUnitForHibernate"
-		transaction-type="RESOURCE_LOCAL">
-		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
-		<properties>	
-							
-     		<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
-			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/jpa.schema" />
-			<property name="javax.persistence.jdbc.user" value="root" />
-			<property name="javax.persistence.jdbc.password" value="" />											
-				 
-		 <!-- javax.persistence.jdbc... property'lerini Hibernate icin de problemsiz sekilde kulanabiliriz. -->
-		 	
-			<property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver" />
-			
-				
-					
-			<!-- 
-			<property name="hibernate.connection.driver_class" value="oracle.jdbc.driver.OracleDriver" />
-			<property name="hibernate.connection.url" value="jdbc:oracle:thin:@localhost:1520:xe" />
-			<property name="hibernate.connection.username" value="Levent" />
-			<property name="hibernate.connection.password" value="123456" />
-			-->				
-				
-		</properties>		
+		</properties>	
 	</persistence-unit>
 </persistence>
