@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import service.EmployeeService;
 import service.EmployeeServiceImpl;
 import model.Employee;
 
@@ -18,6 +19,8 @@ public class EmployeeController extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
 
+	private final EmployeeService employeeService = new EmployeeServiceImpl();
+
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
@@ -25,7 +28,6 @@ public class EmployeeController extends HttpServlet {
 		String employeeSurname = req.getParameter("surname");
 		int employeeSalary = Integer.parseInt(req.getParameter("salary"));
 
-		EmployeeServiceImpl employeeService = new EmployeeServiceImpl();
 		Employee employee = new Employee(employeeName, employeeSurname, employeeSalary);
 		employeeService.insertEmployee(employee);
 
@@ -38,7 +40,7 @@ public class EmployeeController extends HttpServlet {
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		EmployeeServiceImpl employeeService = new EmployeeServiceImpl();
+
 		int employeeId = Integer.parseInt(req.getParameter("employeeId"));
 		employeeService.removeEmployee(employeeId);
 
